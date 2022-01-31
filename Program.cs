@@ -175,7 +175,7 @@ namespace DIS_Assignmnet1_SPRING_2022
         */
         private static int SumOfUnique(int[] bull_bucks)
             {  
-                
+                //For calculating the unique elements in a given array 
 
                 try
                 {
@@ -186,24 +186,18 @@ namespace DIS_Assignmnet1_SPRING_2022
                     int temp = 0;
                     foreach (int ip in bull_bucks)
                     {
-                        array[ip-1] = array[ip-1]+1;
+                        array[ip-1] = array[ip-1]+1; //This is an array which stores the count of each input array element 
                     }
 
-                    foreach (int i in array)
+                    foreach (int i in array)  //looping through the count array and forming sum of elements which are unique(count=1)
                     {
                         post += 1;
                         if (i == 1)
                         {
-                            temp += post;
+                            temp += post;  
                         }
-
                     }
-                    return temp;
-                  
-
-
-
-
+                    return temp; //returning the total sum of all unique elements 
                 }
                 
                 catch (Exception)
