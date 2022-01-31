@@ -31,7 +31,7 @@ namespace DIS_Assignmnet1_SPRING_2022
            
             //Question 3
             Console.WriteLine("Q3");
-            int[] bull_bucks = new int[] { 1, 2, 3, 4,5};
+            int[] bull_bucks = new int[] {1, 2, 3, 2};
             int unique_sum = SumOfUnique(bull_bucks);
             
             Console.WriteLine("Sum of Unique Elements in the array are :{0}", unique_sum);
@@ -175,29 +175,37 @@ namespace DIS_Assignmnet1_SPRING_2022
         */
         private static int SumOfUnique(int[] bull_bucks)
             {  
+                
+
                 try
                 {
-                    
+                   
+
                     int[] array = new int[100];
-                    int position = 0;
-                    int sum = 0;
-                    foreach (int s in bull_bucks)
+                    int post = 0;
+                    int temp = 0;
+                    foreach (int ip in bull_bucks)
                     {
-                        array[s] = array[s] + 1;
+                        array[ip-1] = array[ip-1]+1;
                     }
 
                     foreach (int i in array)
                     {
-
+                        post += 1;
                         if (i == 1)
                         {
-                            sum = sum + position;
+                            temp += post;
                         }
-                        position += 1;
+
                     }
-                    return sum;
+                    return temp;
+                  
+
+
+
 
                 }
+                
                 catch (Exception)
                 {
                     throw;
